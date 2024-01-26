@@ -1,0 +1,13 @@
+digraph process_state {
+    rankdir=LR;
+    size="8,5"
+    node [shape = doublecircle]; new exit;
+    node [shape = circle];
+
+    new -> ready [ label = "资源准备完毕" ];
+    ready -> running [ label = "调度执行" ];
+    running -> exit [ label = "执行结束" ];
+    running -> blocked [ label = "等待事件" ];
+    blocked -> ready [ label = "事件完成" ];
+    running -> ready [ label = "时间片用尽" ];
+}

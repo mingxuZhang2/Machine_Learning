@@ -1,0 +1,34 @@
+digraph DecisionTree {
+    node [shape=box];
+
+    n0 [label="纹理"];
+    n1 [label="清晰"];
+    n2 [label="稍糊"];
+    n3 [label="模糊", shape=ellipse, style=filled, color=lightgrey];
+    n4 [label="根蒂"];
+    n5 [label="色泽"];
+    n6 [label="是好瓜", shape=ellipse, style=filled, color=lightgreen];
+    n7 [label="是好瓜", shape=ellipse, style=filled, color=lightgreen];
+    n8 [label="不是好瓜", shape=ellipse, style=filled, color=lightcoral];
+    n9 [label="乌黑"];
+    n10 [label="不是好瓜", shape=ellipse, style=filled, color=lightcoral];
+    n11 [label="不是好瓜", shape=ellipse, style=filled, color=lightcoral];
+    n12 [label="敲声"];
+    n13 [label="是好瓜", shape=ellipse, style=filled, color=lightgreen];
+    n14 [label="不是好瓜", shape=ellipse, style=filled, color=lightcoral];
+
+    n0 -> n1 [label="清晰"];
+    n0 -> n2 [label="稍糊"];
+    n0 -> n3 [label="模糊"];
+    n1 -> n4 [label=""];
+    n2 -> n5 [label=""];
+    n4 -> n6 [label="蜷缩"];
+    n4 -> n7 [label="稍蜷"];
+    n4 -> n8 [label="硬挺"];
+    n5 -> n9 [label="乌黑"];
+    n5 -> n10 [label="青绿"];
+    n5 -> n11 [label="浅白"];
+    n9 -> n12 [label=""];
+    n12 -> n13 [label="浊响"];
+    n12 -> n14 [label="沉闷"];
+}
